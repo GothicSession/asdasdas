@@ -334,4 +334,13 @@ window.addEventListener('DOMContentLoaded', () => {
             plusDots(0);
         });
 
+        dots.forEach(dot=>{
+            dot.addEventListener('click',(e)=>{
+                const slideTo=e.target.getAttribute('data-slide-to');
+                slideIndex=slideTo;
+                showSlides(slideIndex);
+                showDots(slideIndex);
+            });
+        });
+
 });
